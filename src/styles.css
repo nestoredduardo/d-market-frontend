@@ -40,11 +40,12 @@ Body {
   display: flex;
   align-items: center;
   background-color: white;
+  border-radius: 0.5rem;
 }
 
 .Search__input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.8rem;
   background-color: transparent;
   border: none;
   outline: none;

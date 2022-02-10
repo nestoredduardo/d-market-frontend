@@ -5,10 +5,6 @@ let paginationNode = document.querySelectorAll('#Pagination_number');
 paginationNode = [...paginationNode];
 const categoriesNode = document.getElementById('Category_list');
 
-const menuBtn = document.getElementById('Menu__button');
-const cerrarBtn = document.getElementById('Close_category');
-const categoryBtn = document.getElementById('Category_button');
-
 const searchInput = document.getElementById('buscar_input');
 
 let arrowLeftNode = document.querySelectorAll('#arrow-left');
@@ -144,34 +140,8 @@ const getCategories = async () => {
   categoriesNode.append(...allCategories);
 };
 
-//Menú lateral
-menuBtn.addEventListener('click', () => {
-  categoriesNode.classList.add('active');
-});
-
-cerrarBtn.addEventListener('click', () => {
-  categoriesNode.classList.remove('active');
-});
-
 getProducts();
 getCategories();
-
-//Eventos de categoría
-categoryBtn.addEventListener('mouseover', () => {
-  categoriesNode.classList.add('display');
-  categoryBtn.removeEventListener('mouseleave', () => {});
-});
-
-categoriesNode.addEventListener('mouseover', () => {
-  categoriesNode.classList.add('display');
-});
-
-categoriesNode.addEventListener('mouseleave', () => {
-  categoriesNode.classList.remove('display');
-  categoryBtn.addEventListener('mouseleave', () => {
-    categoriesNode.classList.remove('display');
-  });
-});
 
 //Search event
 searchInput.addEventListener('input', async (e) => {
@@ -181,8 +151,6 @@ searchInput.addEventListener('input', async (e) => {
 
   const response = await fetch(`${URL}search?input=${valor}`);
   const data = await response.json();
-
-  console.log(data);
 
   const productList = data.body.products;
 
