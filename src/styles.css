@@ -167,6 +167,29 @@ Body {
   font-weight: bold;
 }
 
+/* Pagination Styles */
+
+.Pagination_nav {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3551d5;
+  border: 1px solid #3551d5;
+  border-radius: 0.5rem;
+}
+
+.Pagination_nav:hover {
+  cursor: pointer;
+  background-color: #f2ecff;
+}
+
+.disabled {
+  color: rgb(203, 213, 224);
+  border: none;
+  cursor: not-allowed;
+}
+
 /* Footer Styles */
 
 .Footer {

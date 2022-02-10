@@ -99,13 +99,19 @@ const createPagination = (npages, category, npage) => {
     item.append(...allPages);
   });
 
+  console.log(npage);
+
   if (parseInt(npage) - 1 > 0) {
     console.log('Allow left');
     arrowLeftNode.forEach((item) => {
       item.addEventListener('click', () => {
         getProducts(npage - 1, category);
       });
-      item.classList.add('pointer');
+    });
+  } else {
+    console.log(npage);
+    arrowLeftNode.forEach((item) => {
+      item.classList.add('disabled');
     });
   }
 
@@ -115,7 +121,10 @@ const createPagination = (npages, category, npage) => {
       item.addEventListener('click', () => {
         getProducts(parseInt(npage) + 1, category);
       });
-      item.classList.add('pointer');
+    });
+  } else {
+    arrowRightNode.forEach((item) => {
+      item.classList.add('disabled');
     });
   }
 };
