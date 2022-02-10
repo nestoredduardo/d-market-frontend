@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B-Market</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <img
+        class="Logo"
+        src="./src/assets/Logo.png"
+        alt="B-Market"
+        height="30"
+        width="30"
+      />
+      <h2 class="Title">B-Market</h2>
+      <form class="Search">
+        <input
+          class="Search__input"
+          type="text"
+          id="buscar_input"
+          name="buscar"
+          placeholder="Busca productos, categorías y más..."
+        />
+        <img
+          src="./src/assets/icons-search.png"
+          alt="Search"
+          width="25"
+          height="25"
+        />
+      </form>
+      <button class="Category__button button" id="Category_button">
+        Categorías
+        <img
+          src="./src/assets/icon-arrow-down.png"
+          alt="Mostrar categorías"
+          height="15"
+          width="15"
+        />
+      </button>
+      <button class="Menu__button button" id="Menu__button">
+        <img src="./src/assets/icon-menu.png" alt="Mostrar categorías" />
+      </button>
+    </header>
+    <aside class="Category_list" id="Category_list">
+      <img
+        id="Close_category"
+        class="Close_category button"
+        src="./src/assets/icon-cerrar.png"
+        alt="Cerrar"
+        height="30"
+        width="30"
+      />
+    </aside>
+    <main class="Main">
+      <section class="Pagination">
+        <img
+          class="Pagination__arrow"
+          id="arrow-left"
+          src="./src/assets/icon-left-arrow.png"
+          alt="Flecha Izquierda"
+        />
+        <div id="Pagination_number"></div>
+        <img
+          class="Pagination__arrow"
+          id="arrow-right"
+          src="./src/assets/icon-right-arrow.png"
+          alt="Flecha derecha"
+        />
+      </section>
+      <div class="lds-ring" id="Loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <section class="List" id="List"></section>
+      <section class="Pagination">
+        <img
+          class="Pagination__arrow"
+          id="arrow-left"
+          src="./src/assets/icon-left-arrow.png"
+          alt="Flecha Izquierda"
+        />
+        <div id="Pagination_number"></div>
+        <img
+          class="Pagination__arrow"
+          id="arrow-right"
+          src="./src/assets/icon-right-arrow.png"
+          alt="Flecha derecha"
+        />
+      </section>
+    </main>
+    <footer class="Footer">
+      <b class="Footer__text">Hecho por</b>
+      <a target="_blank" class="link" href="https://twitter.com/nestoredduardo">
+        @nestoredduardo
+      </a>
+    </footer>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
