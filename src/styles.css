@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+:root {
+  --brand: #3551d5;
+  --darkBrand: #0a0f26;
+}
+
+Body {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+
+.Header {
+  display: flex;
+  padding: 1rem 5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--brand);
+}
+
+.Title {
+  display: none;
+}
+
+.Search {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.Search__input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.Category__button {
+  display: none;
+}
+
+.Menu__button {
+  height: 3rem;
+}
+
+.Menu__button img {
+  height: inherit;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Aside */
+
+.Category_list {
+  padding: 1rem;
+  position: fixed;
+  right: -200px;
+  width: 200px;
+  flex-direction: column;
+  background-color: var(--brand);
+  color: white;
+  transition: all 200ms linear;
+}
+
+.Category_list h1 {
+  margin: 1rem 0.5rem;
+}
+
+.active {
+  right: 0px;
+}
+
+.hover:hover {
+  color: #3a2a2a;
+  cursor: pointer;
+}
+
+/* Main Styles */
+
+.Main {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Pagination {
+  display: flex;
+  align-items: center;
+}
+
+.Pagination span {
+  margin: 0 0.5rem;
+  font-size: 2.5rem;
+  color: var(--brand);
+  cursor: pointer;
+}
+
+.Pagination__arrow {
+  width: 2rem;
+  height: 2rem;
+}
+
+.List {
+  min-height: 20rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 740px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Error_img {
+  width: 250px;
+  height: 200px;
+}
+
+.Error_message {
+  width: 100%;
+  color: red;
+}
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  padding: 1rem;
+}
+
+.Product__img {
+  width: 300px;
+  height: 300px;
+}
+
+.Product__title {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.Product__price {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+
+.Footer {
+  margin-top: auto;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  background-color: var(--brand);
+}
+
+.Footer__text {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.link {
+  color: var(--darkBrand);
+}
+
+/* Extra Styles */
+
+.display_none {
+  display: none !important;
+}
+
+.display {
+  display: inline-block !important;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.lds-ring {
+  display: none;
+  position: relative;
+  top: 10rem;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--brand) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Header {
+    padding: 1.5rem 12%;
+  }
+
+  .Logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Title {
+    display: inline-flex;
+    margin: 0 1rem;
+    color: white;
+  }
+
+  .Search__input {
+    padding: 1rem 0.5rem;
+  }
+
+  .Category__button {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    align-items: center;
+    border: 2px var(--darkBrand) solid;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  .Category__button:hover {
+    background-color: var(--darkBrand);
+  }
+
+  .Menu__button,
+  .Close_category {
+    display: none;
+  }
+
+  .Category_list {
+    right: 9%;
+    top: 5.5rem;
+    display: none;
+  }
+
+  .Footer {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+}
