@@ -11,19 +11,15 @@ cerrarBtn.addEventListener('click', () => {
   categoriesNode.classList.remove('active');
 });
 
+let showCategoryList = false;
+
 //Eventos de categoría
-categoryBtn.addEventListener('mouseover', () => {
-  categoriesNode.classList.add('display');
-  categoryBtn.removeEventListener('mouseleave', () => {});
-});
-
-categoriesNode.addEventListener('mouseover', () => {
-  categoriesNode.classList.add('display');
-});
-
-categoriesNode.addEventListener('mouseleave', () => {
-  categoriesNode.classList.remove('display');
-  categoryBtn.addEventListener('mouseleave', () => {
+categoryBtn.addEventListener('click', () => {
+  if (!showCategoryList) {
+    showCategoryList = true;
+    categoriesNode.classList.add('display');
+  } else {
+    showCategoryList = false;
     categoriesNode.classList.remove('display');
-  });
+  }
 });

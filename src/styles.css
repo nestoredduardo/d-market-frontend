@@ -77,9 +77,11 @@ Body {
   right: -200px;
   width: 200px;
   flex-direction: column;
-  background-color: var(--brand);
-  color: white;
+  background-color: white;
+  color: rgb(122, 110, 170);
   transition: all 200ms linear;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
 
 .Category_list h1 {
@@ -148,6 +150,7 @@ Body {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
   padding: 1rem;
+  border-radius: 1.5rem;
 }
 
 .Product__img {
@@ -277,9 +280,9 @@ Body {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .Header {
-    padding: 1.5rem 12%;
+    padding: 1.5rem 4%;
   }
 
   .Logo {
@@ -291,6 +294,7 @@ Body {
     display: inline-flex;
     margin: 0 1rem;
     color: white;
+    font-size: 2rem;
   }
 
   .Search__input {
@@ -302,14 +306,14 @@ Body {
     gap: 0.5rem;
     padding: 1rem;
     align-items: center;
-    border: 2px var(--darkBrand) solid;
+    background-color: white;
     border-radius: 1rem;
-    color: white;
+    color: var(--brand);
     font-weight: bold;
   }
 
   .Category__button:hover {
-    background-color: var(--darkBrand);
+    background-color: #f2ecff;
   }
 
   .Menu__button,
@@ -318,9 +322,11 @@ Body {
   }
 
   .Category_list {
-    right: 9%;
+    right: 4%;
+    border-radius: 1rem;
     top: 5.5rem;
     display: none;
+    border: 1px solid rgb(231, 227, 235);
   }
 
   .Footer {
