@@ -78,14 +78,19 @@ Body {
   width: 200px;
   flex-direction: column;
   background-color: white;
-  color: rgb(122, 110, 170);
+  color: #3551d5;
   transition: all 200ms linear;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
 }
 
 .Category_list h1 {
-  margin: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.Category_list h1:hover {
+  cursor: pointer;
+  background-color: #dde5e7;
 }
 
 .active {
@@ -332,5 +337,19 @@ Body {
   .Footer {
     padding: 2rem;
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Header {
+    padding: 1.5rem 15%;
+  }
+
+  .Category__button {
+    font-size: 1.5rem;
+  }
+
+  .Category_list {
+    right: 15%;
   }
 }
