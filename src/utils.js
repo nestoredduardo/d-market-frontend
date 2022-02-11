@@ -99,24 +99,25 @@ const createPagination = (npages, category, npage) => {
     item.append(...allPages);
   });
 
-  console.log(npage);
-
   if (parseInt(npage) - 1 > 0) {
-    console.log('Allow left');
+    arrowLeftNode.forEach((item) => {
+      item.classList.remove('disabled');
+    });
     arrowLeftNode.forEach((item) => {
       item.addEventListener('click', () => {
         getProducts(npage - 1, category);
       });
     });
   } else {
-    console.log(npage);
     arrowLeftNode.forEach((item) => {
       item.classList.add('disabled');
     });
   }
 
   if (parseInt(npage) + 1 <= npages) {
-    console.log('Allow right');
+    arrowRightNode.forEach((item) => {
+      item.classList.remove('disabled');
+    });
     arrowRightNode.forEach((item) => {
       item.addEventListener('click', () => {
         getProducts(parseInt(npage) + 1, category);
