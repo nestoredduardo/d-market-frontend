@@ -195,7 +195,7 @@ Body {
 .disabled {
   color: rgb(203, 213, 224);
   border: none;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 /* Footer Styles */
